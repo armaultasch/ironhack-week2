@@ -1,0 +1,12 @@
+<h1> My Recipe For <%= @name %> </h1>
+<link rel="stylesheet" href="/styles.css">
+
+<h2> Ingredients </h2>
+
+<ol class="ingredients">
+	<% @ingredients.each do |the_ingredient| %>
+		<li> <%= the_ingredient %> </li>
+	<% end %>
+</ol>
+
+<img src="/friends.gif">

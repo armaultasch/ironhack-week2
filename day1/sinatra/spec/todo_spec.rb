@@ -54,10 +54,24 @@ RSpec.describe ToDoList do
 	describe "#delete_task" do
 		it "deletes the task you tell it" do
 
-			expect(@to_do_list.delete_task("Do the laundry").length).to eq(1)
-
+			expect(@to_do_list.delete_task("Do the laundry").length).to eq(2)
+			#expect (@to_do_list.@tasks).to include(task2)
+			#old_lendth = @to_do_list.@tasks.length
+			#@to_do_list.delete_task(task2.id)
+			#expect (@to_do_list.@tasks).not_to include(task2)
+			#expect (@to_do_list.@tasks.length).to eq(2)
 		end
 	end
+
+	describe "#find_task_by_id" do
+		it "returns the task for the correct id" do
+			expect(@to_do_list.find_task_by_id(task1.id)).to eq(task1)
+		end
+	end
+		it "returns nil for incorect id" do
+			expect(@to_do_list.find_task_by_id(99999)).to eq(nil)
+		end
+	
 end
 
 

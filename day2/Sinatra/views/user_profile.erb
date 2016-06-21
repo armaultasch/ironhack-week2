@@ -1,0 +1,12 @@
+<!-- user_profile.erb -->
+<h1> User Profile </h1>
+
+<h2> Username: <%= @name %> </h2>
+
+<% if @info != nil %>
+<ul>
+	<li> <%= @info[:name] %> </li>
+	<li> <%= @info[:email] %> </li>
+
+</ul>
+<% end %>
