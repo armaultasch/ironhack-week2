@@ -1,6 +1,7 @@
 # app.rb
 require "sinatra"
 require_relative("lib/calculator.rb")
+require_relative("lib/memory_saver.rb")
 # my_calc = Calculator.new
 
 get "/home" do 
@@ -27,7 +28,17 @@ post "/calculate" do
 		"The division of #{first} and #{second} is #{result}"
 	end
 end
+	memory = MemorySaver.new
+get "/" do
+	@memory_number = memory.load
+	erb (:home)
+end
 
+post "/save_to_memory" do
+
+	memory.save(params[:result])
+	redirect to ("/")
+end
 # get "/add" do 
 # 	erb(:add)
 # end

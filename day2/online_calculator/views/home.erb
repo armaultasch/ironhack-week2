@@ -8,9 +8,16 @@
 	<h1> Hey! How would you like to calculate today? </h1>
   <h2>Calculate</h2>
   <form action="/calculate" method="POST">
+  	<label>First Number:</label>
   <input type="number" name="first_number" placeholder="1st number"> +
-
+	<label>Second Number:</label>
   <input type="number" name="second_number" placeholder="2nd number">
+	<% if @memory_number.nil? %>
+	<input type="number" name="second_number">
+	<% else %>
+	<input type="number" name="second_number" value="<%= @memory_number %>">
+	<% end %>
+
 
   <button type="submit" name="operation" value="add">Add</button>
   <button type="submit" name="operation" value="subtract">Subtract</button>
@@ -18,5 +25,6 @@
   <button type="submit" name="operation" value="divide">Divide</button>
 
 </form>
+
 </body>
 </html>
