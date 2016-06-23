@@ -1,0 +1,16 @@
+<!-- home.erb -->
+<!-- shows list of posts that will lead to their respective pages -->
+
+<h1>Blog Post</h1>
+<h2> Here are your posts! </h2>
+<ul>
+	<% @blog.each_with_index do |post, index| %>
+	<li>
+  <a href = "/details/<%= index %>"><%= post.title %> </a>
+</li>
+<% end %>
+
+</ul>
+
+<!-- link that will take to "make a new post" page -->
+ <a href = "/new_post">Make a New Post!</a>

@@ -1,0 +1,17 @@
+<!-- new_post.erb -->
+
+<html>
+<head>
+	<title> Add Tasks </title>
+</head>
+<body>
+<h1> Enter your deepest thoughts below: </h1>
+<form action="/create_post" method="POST">
+  <input type="text" name="post_title" placeholder="Post Title">
+  <input type="text" name="post_text" placeholder="Post Text">
+  <input type="text" name="post_category" placeholder="Post Category">
+  <input type="text" name="post_author" placeholder="Post Author">
+  <button type="submit">Add Post!</button>
+</form>
+</body>
+</html>
