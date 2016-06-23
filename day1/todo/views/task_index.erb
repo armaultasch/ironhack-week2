@@ -1,0 +1,30 @@
+<!-- task_index.erb -->
+
+<h1> Welcome to the ToDoList! </h1>
+<p> Your Tasks Are: </p>
+<ul>
+<% @show_tasks.each do |task| %>
+	<li> 
+		<%= task.content %> 
+
+
+
+	</li>
+
+<% end %>
+</ul>
+<!-- when you want to show an array in html(on a webpage) need to each it -->
+<form action="/new_task" method="post">
+	<input type="hidden"
+		name="task" value="<%= @show_tasks %>">
+
+	<!-- 	<%  @saved_task.nil? %>
+    <input type="text" name="task">
+  <%  %>
+    <input type="text" name="task" value="<%= @saved_task %>">
+  <%  %> -->
+
+	<button type="submit">
+		Add a New Task
+	</button>
+</form>

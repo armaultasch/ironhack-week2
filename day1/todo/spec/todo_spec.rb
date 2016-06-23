@@ -63,14 +63,14 @@ RSpec.describe ToDoList do
 		end
 	end
 
-	describe "#find_task_by_id" do
-		it "returns the task for the correct id" do
-			expect(@to_do_list.find_task_by_id(task1.id)).to eq(task1)
-		end
-	end
-		it "returns nil for incorect id" do
-			expect(@to_do_list.find_task_by_id(99999)).to eq(nil)
-		end
+	# describe "#find_task_by_id" do
+	# 	it "returns the task for the correct id" do
+	# 		expect(@to_do_list.find_task_by_id(task1.id)).to eq(task1)
+	# 	end
+	# end
+	# 	it "returns nil for incorect id" do
+	# 		expect(@to_do_list.find_task_by_id(99999)).to eq(nil)
+	# 	end
 	
 end
 

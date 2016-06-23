@@ -1,7 +1,11 @@
 
 class ToDoList
+
 	attr_reader :tasks
-	def initialize 
+	#include SaveTask
+	def initialize#(user)
+		# @storage = YAML::Store.new("./public/tasks_test.yml")
+		# @user = user
 		@tasks = []
 	end
 
@@ -13,6 +17,10 @@ class ToDoList
 		@tasks.delete_if {|task| content == task.content}
 	
 	end
+
+	def load_tasks
+		@tasks
+	end
 		#def delete_task(task_id)
 		####@tasks.delete_if do |task|
 		# if task.id == task_id
@@ -23,7 +31,7 @@ class ToDoList
 		#end
 		#end
 
-	def find_task_by_id(task_id)
+	 def find_task_by_id(task_id)
 		@tasks.find{ |task| task_id == task.id}
-	end
+	 end
 end

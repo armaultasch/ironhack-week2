@@ -1,0 +1,14 @@
+<!-- new_task.erb -->
+<html>
+<head>
+	<title> Add Tasks </title>
+</head>
+<body>
+<h1> Enter what you need to do below: </h1>
+<form action="/create_task" method="POST">
+  <input type="text" name="task_content" placeholder="task">
+
+  <button type="submit">Add Task!</button>
+</form>
+</body>
+</html>
