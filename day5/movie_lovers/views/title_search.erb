@@ -1,0 +1,16 @@
+<!-- title_search.erb -->
+<html>
+<head>
+  <title>IMDB | Search</title>
+</head>
+<body>
+	<h1> Please enter a movie keyword: </h1>
+  <form action="/keyword" method="POST">
+  	<label>Keyword:</label>
+  <input type="text" name="keyword" placeholder="word to search">
+
+  <button type="submit">Search movies!</button>
+  </form>
+
+</body>
+</html>
