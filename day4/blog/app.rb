@@ -7,17 +7,17 @@ require_relative("lib/post.rb")
 
 blog = Blog.new
 
-blog.add_post Post.new("First Post", 2011, "This is the first blog post I am making", "farms", "Alison Maultasch" )
-blog.add_post Post.new("Second Post", 2012, "This is the second blog post I am making", "accessories", "Alison Maultasch")
-blog.add_post Post.new("Third Post", 2013, "This is the third blog post I am making", "farms", "Jason Sandler" )
+blog.add_post Post.new("First Post", Time.new(2011), "This is the first blog post I am making", "farms", "Alison Maultasch" )
+blog.add_post Post.new("Second Post", Time.new(2012), "This is the second blog post I am making", "accessories", "Alison Maultasch")
+blog.add_post Post.new("Third Post", Time.new(2013), "This is the third blog post I am making", "farms", "Jason Sandler" )
 
 get "/" do
-	@blog = blog.show_post
+	@blog = blog.latest_posts
 	erb(:home)
 end
 
 get "/details/:index" do
-	blog_post = blog.show_post
+	blog_post = blog.latest_posts
 	index = params[:index].to_i
 	@now = blog_post[index]
 	erb(:post_details)
