@@ -6,15 +6,15 @@
 </head>
 <body>
 	<h1> Results:</h1>
-	<h1> Which movie was released in the year <%=@random_movie.release_date %>?</h1>
+	<h1> Click on the movie was released on <%=@random_movie.release_date %>?</h1>
 
   <ul>
 	<% @final_array.each_with_index do |movie, index| %>
 	<li>
 		<% if movie == @random_movie %>
-<img src="<%= movie.poster %>" height="120" width="120" onClick="alert('yay!')"/>
+<img src="<%= movie.poster %>" height="200" width="200" onClick="alert('yay!')"/>
 	<% else %> 
-	<img src="<%= movie.poster %>" height="120" width="120" onClick="alert('wrong')"/>
+	<img src="<%= movie.poster %>" height="200" width="200" onClick="alert('wrong')"/>
 <% end %>
 </li>
 <% end %>
@@ -22,6 +22,4 @@
 </ul>
 
 
-<!--   <button type="submit">Select</button>
- -->
-
+dr won gaedea 305-595-1616
